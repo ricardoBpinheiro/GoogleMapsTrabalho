@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-
-
 public class DAL {
 
     private static final String TAG = "DAL";
@@ -42,7 +40,7 @@ public class DAL {
         return true;
     }
 
-    public boolean deleteById(int id){
+    public boolean delete(int id){
 
         String where = "_id = ?";
         String[] args = { String.valueOf(id) };
@@ -85,7 +83,7 @@ public class DAL {
         return true;
     }
 
-    public Cursor findById(int id) {
+    public Cursor update(int id) {
         Cursor cursor;
         String where = "_id = ?";
         String[] args = { String.valueOf(id) };
@@ -103,7 +101,7 @@ public class DAL {
         return cursor;
     }
 
-    public Cursor loadAll() {
+    public Cursor load() {
         Cursor cursor;
         String[] fields = {CreateDatabase.NOME, CreateDatabase.EMAIL};
         db = database.getReadableDatabase();

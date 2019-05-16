@@ -1,10 +1,10 @@
 package com.example.googlemapstrabalho;
 
 public class Contato {
-    String nome;
-    String email;
-    double latitude;
-    double longitude;
+    public String nome;
+    public String email;
+    public double latitude;
+    public double longitude;
 
     public Contato(String nome, String email, double latitude, double longitude) {
         this.nome = nome;
